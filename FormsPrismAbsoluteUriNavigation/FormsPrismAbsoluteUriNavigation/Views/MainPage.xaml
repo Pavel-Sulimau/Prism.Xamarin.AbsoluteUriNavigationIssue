@@ -6,11 +6,13 @@
              BackgroundColor="FloralWhite">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand"
-                     VerticalOptions="CenterAndExpand">
+                     VerticalOptions="CenterAndExpand"
+                     Padding="10">
             <Button Text="Navigate to 'FirstPage'"
                     Command="{Binding NavigateToFirstPageCommand}" />
             <Button Text="Navigate to 'FirstPage/SecondPage'"
                     Command="{Binding NavigateToSecondPageThroughFirstPageCommand}" />
+            <Label Text="Please note that 'FirstPageViewModel' has 'await Task.Delay(3000)' inside its 'InitializeAsync' whereas 'SecondPageViewModel' has 'await Task.Delay(500)'." />
             <ActivityIndicator IsVisible="{Binding IsBusy}"
                                IsRunning="{Binding IsBusy}" />
             <Label Text="{Binding NavigationResult}" />
