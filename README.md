@@ -28,7 +28,7 @@ await NavigateToPageAsync("FirstPage/SecondPage")
 
 If a user navigates to `SecondPage` and presses 'Back button' before `FirstPageViewModel` has completed its initialization (which takes at least 3 seconds in this example), then the backward navigation leads the user to `MainPage`
 
-<img src="https://user-images.githubusercontent.com/8143332/68886698-bda4c580-0728-11ea-9a8a-13df56dbb0c1.gif" width="300" height="600">
+<img src="https://user-images.githubusercontent.com/8143332/68890098-4cb4dc00-072f-11ea-8f28-d32d6e50548d.gif" width="300" height="600">
 
 **but** if the user presses 'Back button' after `FirstPageViewModel` has finished its initialization in background (pay attention to how 'Back button' changes after it happens), then the backward navigation lead the user to `FirstPageViewModel` which may be ambiguous to the user
 
